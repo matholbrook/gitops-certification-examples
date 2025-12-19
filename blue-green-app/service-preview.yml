@@ -3,11 +3,10 @@ kind: Service
 metadata:
   name: rollout-bluegreen-preview
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: trivial-go-web-app  
   ports:
-      - nodePort: 32000
-        protocol: TCP
-        port: 8080
-
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP

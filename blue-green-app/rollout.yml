@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: simple-rollout
+  name: bluegreen
 spec:
   replicas: 2
   strategy:
